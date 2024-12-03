@@ -237,40 +237,30 @@ h6 {
   color: #333;
 }
 
-/* Ensure the navmenu ul has enough space to display all items */
 .navmenu ul {
-  flex-direction: column;
-  width: 100%;
-  max-height: 0;
-  overflow: hidden;
-  padding-bottom: 10px; /* Add padding to ensure space for the last item */
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
   transition: max-height 0.3s ease-in-out;
+  overflow: hidden; /* Prevent overflow issues */
 }
 
-.navmenu ul.show {
-  max-height: 500px; /* Increase max-height to accommodate more items */
-  overflow-y: auto; /* Allow scrolling if the content exceeds the viewport height */
-}
-
-/* Ensure no cropping for the last item */
 .navmenu li {
-  margin: 10px 0;
-  width: 100%; /* Ensure full width for mobile layout */
+  margin: 0 15px;
 }
 
-/* Prevent cropping issues for very small screens */
-@media (max-width: 768px) {
-  .navmenu ul {
-    position: relative; /* Keep it within the parent */
-    overflow-y: auto; /* Enable scrolling if necessary */
-  }
-
-  /* Optional: Increase touch target size for better mobile usability */
-  .navmenu a {
-    padding: 12px 15px; /* Make links easier to tap */
-  }
+.navmenu a {
+  color: #333; /* Dark gray text */
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
 }
-
 
 .navmenu a i {
   margin-right: 8px;
@@ -334,7 +324,7 @@ h6 {
   }
 
   .navmenu ul.show {
-    max-height: 300px; /* Adjust based on the number of menu items */
+    max-height: 500px; /* Ensures the menu height is large enough for all items */
   }
 
   .navmenu li {
@@ -344,6 +334,11 @@ h6 {
   .nav-title {
     font-size: 16px;
     font-weight: bold;
+  }
+
+  /* Ensure no cropping at the bottom */
+  .navmenu ul.show {
+    max-height: none; /* No limit when expanded */
   }
 }
 
@@ -637,8 +632,8 @@ section,
 }
 
 .home .image-replace {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Ensure the image doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
   z-index: 3; /* Ensures the image is above the background */
   display: block;
   margin: 0 auto; /* Centers the image horizontally */
@@ -689,6 +684,12 @@ section,
   .home p {
     font-size: 20px;
   }
+
+  /* Ensuring image is responsive */
+  .home .image-replace {
+    max-width: 90%; /* Allows the image to scale down on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 
 @media (max-width: 576px) {
@@ -699,7 +700,13 @@ section,
   .home p {
     font-size: 18px;
   }
+
+  /* Adjust image size for very small screens */
+  .home .image-replace {
+    max-width: 80%; /* Further reduces image size */
+  }
 }
+
 
 
 /*--------------------------------------------------------------
