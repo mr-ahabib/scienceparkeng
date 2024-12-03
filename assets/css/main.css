@@ -237,29 +237,40 @@ h6 {
   color: #333;
 }
 
+/* Ensure the navmenu ul has enough space to display all items */
 .navmenu ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  padding-bottom: 10px; /* Add padding to ensure space for the last item */
   transition: max-height 0.3s ease-in-out;
 }
 
-.navmenu li {
-  margin: 0 15px;
+.navmenu ul.show {
+  max-height: 500px; /* Increase max-height to accommodate more items */
+  overflow-y: auto; /* Allow scrolling if the content exceeds the viewport height */
 }
 
-.navmenu a {
-  color: #333; /* Dark gray text */
-  font-family: Arial, sans-serif;
-  display: flex;
-  align-items: center;
-  padding: 8px 15px;
-  font-size: 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+/* Ensure no cropping for the last item */
+.navmenu li {
+  margin: 10px 0;
+  width: 100%; /* Ensure full width for mobile layout */
 }
+
+/* Prevent cropping issues for very small screens */
+@media (max-width: 768px) {
+  .navmenu ul {
+    position: relative; /* Keep it within the parent */
+    overflow-y: auto; /* Enable scrolling if necessary */
+  }
+
+  /* Optional: Increase touch target size for better mobile usability */
+  .navmenu a {
+    padding: 12px 15px; /* Make links easier to tap */
+  }
+}
+
 
 .navmenu a i {
   margin-right: 8px;
