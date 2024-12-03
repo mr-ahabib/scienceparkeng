@@ -229,6 +229,14 @@ h6 {
   width: auto;
 }
 
+.nav-title {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #333;
+}
+
 .navmenu ul {
   list-style: none;
   display: flex;
@@ -297,6 +305,16 @@ h6 {
     padding: 10px;
   }
 
+  .nav-logo {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
   .navmenu ul {
     flex-direction: column;
     width: 100%;
@@ -304,29 +322,30 @@ h6 {
     overflow: hidden;
   }
 
+  .navmenu ul.show {
+    max-height: 300px; /* Adjust based on the number of menu items */
+  }
+
   .navmenu li {
     margin: 10px 0;
   }
 
-  .hamburger {
-    display: flex;
+  .nav-title {
+    font-size: 16px;
+    font-weight: bold;
   }
+}
 
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(10px);
-  }
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
 
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
 
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-10px);
-  }
-
-  .navmenu ul.show {
-    max-height: 300px; /* Adjust based on the number of menu items */
-  }
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
 }
 
 
@@ -579,6 +598,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Prevents content overflow */
 }
 
 .home img {
@@ -587,7 +607,7 @@ section,
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Keeps the background image styling */
   z-index: 1;
 }
 
@@ -602,17 +622,29 @@ section,
 .home .container {
   position: relative;
   z-index: 3;
+  text-align: center; /* Centers content in the container */
+}
+
+.home .image-replace {
+  max-width: 100%;
+  height: auto;
+  z-index: 3; /* Ensures the image is above the background */
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
 }
 
 .home h2 {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  color: var(--text-color);
+  z-index: 3;
 }
 
 .home p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  color: var(--text-color);
 }
 
 .home p span {
@@ -637,15 +669,27 @@ section,
   color: var(--accent-color);
 }
 
+/* Responsive Styling */
 @media (max-width: 768px) {
   .home h2 {
-    font-size: 32px;
+    font-size: 32px; /* Adjust for smaller screens */
   }
 
   .home p {
     font-size: 20px;
   }
 }
+
+@media (max-width: 576px) {
+  .home h2 {
+    font-size: 28px;
+  }
+
+  .home p {
+    font-size: 18px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -817,7 +861,7 @@ section,
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 20px;
   list-style: none;
   text-align: center;
 }
@@ -825,7 +869,7 @@ section,
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
-  padding: 8px 20px 10px 20px;
+  padding: 8px 20px;
   margin: 0;
   font-size: 15px;
   font-weight: 500;
@@ -853,7 +897,7 @@ section,
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
   }
 }
 
@@ -863,15 +907,15 @@ section,
 }
 
 .portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
+  opacity: 1;  /* Always visible */
   position: absolute;
   left: 12px;
   right: 12px;
-  bottom: -100%;
+  bottom: 0;  /* No transition, always visible */
   z-index: 3;
-  transition: all ease-in-out 0.5s;
   background: color-mix(in srgb, var(--background-color), transparent 10%);
   padding: 15px;
+  transition: none;  /* Disable transition effect */
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
@@ -908,10 +952,6 @@ section,
   font-size: 28px;
 }
 
-.portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-  bottom: 0;
-}
 
 /*--------------------------------------------------------------
 # Services Section
