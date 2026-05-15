@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="speHeroStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#e0f2fe" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="speHeroFill" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <!-- Erlenmeyer flask -->
+  <path d="M168 48 L212 48 L198 118 L226 248 C232 278 214 302 190 302 L154 302 C130 302 112 278 118 248 L146 118 L132 48 Z" stroke="url(#speHeroStroke)" stroke-width="2.5" fill="url(#speHeroFill)"/>
+  <ellipse cx="172" cy="52" rx="28" ry="8" stroke="url(#speHeroStroke)" stroke-width="2" fill="none"/>
+  <!-- Liquid meniscus -->
+  <path d="M138 210 Q172 198 206 210" stroke="url(#speHeroStroke)" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
+  <!-- Beaker -->
+  <path d="M268 92 L332 92 L328 268 C326 292 314 308 300 308 L300 308 C286 308 274 292 272 268 Z" stroke="url(#speHeroStroke)" stroke-width="2.5" fill="url(#speHeroFill)"/>
+  <path d="M264 92 L336 92" stroke="url(#speHeroStroke)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M276 120 L324 120" stroke="url(#speHeroStroke)" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Test tube -->
+  <path d="M360 64 L360 220 C360 238 352 252 340 252 L340 252 C328 252 320 238 320 220 L320 64" stroke="url(#speHeroStroke)" stroke-width="2.5" fill="url(#speHeroFill)"/>
+  <ellipse cx="340" cy="64" rx="22" ry="7" stroke="url(#speHeroStroke)" stroke-width="2" fill="none"/>
+  <!-- Microscope body (simplified) -->
+  <path d="M52 228 L52 340 M52 228 L120 200 L168 212 L188 248 L160 268 L108 252 L52 228" stroke="url(#speHeroStroke)" stroke-width="2.5" stroke-linejoin="round" fill="url(#speHeroFill)"/>
+  <circle cx="188" cy="248" r="14" stroke="url(#speHeroStroke)" stroke-width="2" fill="none"/>
+  <path d="M188 262 L188 312 L132 328" stroke="url(#speHeroStroke)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="52" cy="340" rx="36" ry="10" stroke="url(#speHeroStroke)" stroke-width="2" fill="none"/>
+  <!-- Molecule accent -->
+  <circle cx="400" cy="120" r="6" stroke="url(#speHeroStroke)" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <circle cx="420" cy="100" r="5" stroke="url(#speHeroStroke)" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M406 116 L414 106 M412 124 L418 108" stroke="url(#speHeroStroke)" stroke-width="1.2" opacity="0.5"/>
+</svg>

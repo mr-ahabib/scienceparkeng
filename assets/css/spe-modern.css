@@ -1,0 +1,1163 @@
+/**
+ * Science Park Engineering — modern UI theme
+ * Scoped to body.index-page.spe-modern (loads after main.css)
+ */
+
+/* ========== Design tokens ========== */
+body.index-page.spe-modern {
+  --spe-font: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --spe-ink: #0f172a;
+  --spe-ink-muted: #475569;
+  --spe-bg: #f1f5f9;
+  --spe-surface: #ffffff;
+  --spe-surface-2: #f8fafc;
+  --spe-border: color-mix(in srgb, #0f172a 8%, transparent);
+  --spe-accent: #0369a1;
+  --spe-accent-2: #0284c7;
+  --spe-accent-glow: color-mix(in srgb, #0369a1 35%, transparent);
+  --spe-radius: 14px;
+  --spe-radius-lg: 20px;
+  --spe-radius-xl: 28px;
+  --spe-shadow: 0 4px 6px -1px color-mix(in srgb, #0f172a 8%, transparent),
+    0 12px 24px -4px color-mix(in srgb, #0f172a 12%, transparent);
+  --spe-shadow-lg: 0 20px 50px -12px color-mix(in srgb, #0f172a 18%, transparent);
+}
+
+body.index-page.spe-modern {
+  font-family: var(--spe-font);
+  color: var(--spe-ink);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  /* Lab photo as site-wide backdrop (shows through translucent section scrims) */
+  background-color: #0b1220;
+  background-image: url("../img/home-bg.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 991px) {
+  body.index-page.spe-modern {
+    background-attachment: scroll;
+  }
+}
+
+/* Each section: linear-gradient scrim so the lab photo reads consistently section-to-section */
+body.index-page.spe-modern main.main > section.section {
+  background-color: transparent;
+  position: relative;
+}
+
+body.index-page.spe-modern main.main #home.home.section {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, #020617 58%, transparent) 0%,
+    color-mix(in srgb, #1e293b 68%, transparent) 42%,
+    color-mix(in srgb, #0369a1 52%, transparent) 100%
+  );
+}
+
+body.index-page.spe-modern main.main #about.about.section {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, #f8fafc 88%, transparent) 0%,
+    color-mix(in srgb, #e2e8f0 80%, transparent) 45%,
+    color-mix(in srgb, #cbd5e1 74%, transparent) 100%
+  );
+}
+
+body.index-page.spe-modern main.main #stats.stats.section {
+  background-image: linear-gradient(
+    165deg,
+    color-mix(in srgb, #1e293b 86%, transparent) 0%,
+    color-mix(in srgb, #075985 78%, transparent) 48%,
+    color-mix(in srgb, #020617 90%, transparent) 100%
+  );
+}
+
+body.index-page.spe-modern main.main #skills.skills.section {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 86%, transparent) 0%,
+    color-mix(in srgb, #e0f2fe 78%, transparent) 42%,
+    color-mix(in srgb, #cbd5e1 72%, transparent) 100%
+  );
+}
+
+body.index-page.spe-modern main.main #portfolio.portfolio.section {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, #f1f5f9 88%, transparent) 0%,
+    color-mix(in srgb, #e2e8f0 80%, transparent) 50%,
+    color-mix(in srgb, #94a3b8 68%, transparent) 100%
+  );
+}
+
+body.index-page.spe-modern main.main #services.services.section {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 88%, transparent) 0%,
+    color-mix(in srgb, #f0f9ff 78%, transparent) 45%,
+    color-mix(in srgb, #cbd5e1 74%, transparent) 100%
+  );
+}
+
+body.index-page.spe-modern main.main #contact.contact.section {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, #e2e8f0 86%, transparent) 0%,
+    color-mix(in srgb, #cbd5e1 80%, transparent) 38%,
+    color-mix(in srgb, #0f172a 78%, transparent) 100%
+  );
+}
+
+body.index-page.spe-modern h1,
+body.index-page.spe-modern h2,
+body.index-page.spe-modern h3,
+body.index-page.spe-modern h4 {
+  font-family: var(--spe-font);
+  letter-spacing: -0.02em;
+}
+
+/* ========== Layout helpers (from prior spe-ux) ========== */
+body.index-page.spe-modern main.main {
+  padding-top: 72px;
+  background: transparent;
+}
+
+body.index-page.spe-modern section[id] {
+  scroll-margin-top: 80px;
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  body.index-page.spe-modern .header ~ main {
+    margin-left: 0;
+  }
+
+  body.index-page.spe-modern .header ~ main .home {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* ========== Skip link ========== */
+body.index-page.spe-modern .skip-link {
+  position: absolute;
+  top: -100px;
+  left: 12px;
+  z-index: 100000;
+  padding: 0.65rem 1.1rem;
+  background: var(--spe-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: top 0.2s ease;
+}
+
+body.index-page.spe-modern .skip-link:focus {
+  top: 14px;
+}
+
+/* ========== Navigation ========== */
+body.index-page.spe-modern .navmenu {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 48%, transparent) 0%,
+    color-mix(in srgb, #f8fafc 40%, transparent) 100%
+  );
+  backdrop-filter: blur(12px) saturate(1.45);
+  -webkit-backdrop-filter: blur(12px) saturate(1.45);
+  border-bottom: 1px solid color-mix(in srgb, #ffffff 56%, transparent);
+  box-shadow: 0 6px 28px -6px color-mix(in srgb, #020617 28%, transparent);
+  padding: 12px 24px;
+  z-index: 10000;
+}
+
+body.index-page.spe-modern .nav-logo img {
+  height: 44px;
+  border-radius: 8px;
+}
+
+body.index-page.spe-modern .nav-title {
+  font-family: var(--spe-font);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--spe-ink);
+  letter-spacing: -0.03em;
+}
+
+body.index-page.spe-modern .navmenu a {
+  font-family: var(--spe-font);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--spe-ink-muted);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  gap: 0.35rem;
+}
+
+body.index-page.spe-modern .navmenu a i {
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+body.index-page.spe-modern .navmenu .active {
+  background: linear-gradient(135deg, var(--spe-accent) 0%, var(--spe-accent-2) 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px var(--spe-accent-glow);
+}
+
+body.index-page.spe-modern .navmenu .active i {
+  color: #fff;
+}
+
+body.index-page.spe-modern .navmenu a:hover:not(.active) {
+  background: color-mix(in srgb, var(--spe-accent) 10%, #fff);
+  color: var(--spe-accent);
+}
+
+body.index-page.spe-modern .hamburger span {
+  background: var(--spe-ink);
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* ========== Sections rhythm ========== */
+body.index-page.spe-modern section.section {
+  padding: 88px 0;
+}
+
+body.index-page.spe-modern .section-title {
+  padding-bottom: 48px;
+}
+
+body.index-page.spe-modern .section-title h2 {
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  font-weight: 800;
+  color: var(--spe-ink);
+  letter-spacing: -0.04em;
+}
+
+body.index-page.spe-modern .section-title h2::before {
+  width: 120px;
+  background: color-mix(in srgb, var(--spe-ink) 12%, transparent);
+}
+
+body.index-page.spe-modern .section-title h2::after {
+  width: 48px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--spe-accent), var(--spe-accent-2));
+}
+
+body.index-page.spe-modern .section-title p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--spe-ink-muted);
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.index-page.spe-modern .home.spe-hero {
+  min-height: max(560px, calc(100vh - 72px));
+  min-height: max(560px, calc(100dvh - 72px));
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Single ::before on .home — keep scrim light so home-bg.jpg reads through */
+body.index-page.spe-modern .home.spe-hero.hero-enhanced::before {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #020617 42%, transparent) 0%,
+    color-mix(in srgb, #0f172a 52%, transparent) 100%
+  );
+}
+
+body.index-page.spe-modern .home .hero-brand-bleed {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(0.5rem, 2vw, 1.25rem) 0 clamp(0.25rem, 1vw, 0.75rem);
+  margin: 0;
+  position: relative;
+  z-index: 3;
+}
+
+body.index-page.spe-modern .home .hero-brand-img {
+  display: block;
+  width: auto;
+  max-width: min(720px, 70%);
+  height: auto;
+  max-height: min(46vh, 400px);
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  padding: 0 clamp(0.25rem, 2vw, 1rem);
+}
+
+body.index-page.spe-modern .home .hero-container {
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(0.75rem, 3vw, 1.25rem);
+  padding-right: clamp(0.75rem, 3vw, 1.25rem);
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+body.index-page.spe-modern .home .hero-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.25rem, 3.5vw, 2rem);
+  width: 100%;
+  padding: clamp(0.35rem, 1.5vw, 0.75rem) 0 clamp(1rem, 3vw, 2rem);
+}
+
+body.index-page.spe-modern .home .hero-copy {
+  width: 100%;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: clamp(1.35rem, 3.5vw, 2rem) clamp(1.25rem, 3vw, 1.85rem);
+  border-radius: 22px;
+  text-align: center;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, #ffffff 40%, transparent) 0%,
+    color-mix(in srgb, #e0f2fe 28%, transparent) 38%,
+    color-mix(in srgb, #0f172a 72%, transparent) 100%
+  );
+  border: 1px solid color-mix(in srgb, #ffffff 56%, transparent);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, #ffffff 40%, transparent),
+    0 20px 48px -18px color-mix(in srgb, #020617 65%, transparent);
+}
+
+body.index-page.spe-modern .home .hero-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 0 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+}
+
+body.index-page.spe-modern .home .hero-eyebrow__mark {
+  display: inline-block;
+  width: 28px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38bdf8, #22d3ee);
+  flex-shrink: 0;
+}
+
+body.index-page.spe-modern .home .hero-tagline {
+  font-family: var(--spe-font);
+  font-weight: 800;
+  font-size: clamp(1.25rem, 4.5vw, 2rem);
+  line-height: 1.22;
+  margin: 0 0 0.9rem;
+  color: #f8fafc;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 18px color-mix(in srgb, #000 32%, transparent);
+}
+
+body.index-page.spe-modern .home .hero-lead {
+  margin: 0 0 1.35rem;
+  color: color-mix(in srgb, #e2e8f0 92%, transparent);
+  font-size: clamp(0.94rem, 2.4vw, 1.08rem);
+  line-height: 1.65;
+}
+
+body.index-page.spe-modern .home .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+  justify-content: center;
+}
+
+body.index-page.spe-modern .btn-spe {
+  font-family: var(--spe-font);
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+body.index-page.spe-modern .btn-spe-primary {
+  background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
+  color: var(--spe-accent);
+  box-shadow: 0 8px 28px color-mix(in srgb, #000 35%, transparent);
+}
+
+body.index-page.spe-modern .btn-spe-primary:hover {
+  color: #0c4a6e;
+}
+
+body.index-page.spe-modern .btn-spe-outline {
+  border-color: color-mix(in srgb, #fff 45%, transparent);
+  color: #f8fafc;
+}
+
+body.index-page.spe-modern .btn-spe-outline:hover {
+  background: color-mix(in srgb, #fff 14%, transparent);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ========== About ========== */
+body.index-page.spe-modern .spe-about-shell {
+  max-width: 52rem;
+  margin: 0 auto;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 96%, transparent) 0%,
+    color-mix(in srgb, #f8fafc 90%, transparent) 50%,
+    color-mix(in srgb, #e2e8f0 86%, transparent) 100%
+  );
+  border-radius: var(--spe-radius-xl);
+  border: 1px solid color-mix(in srgb, #ffffff 68%, transparent);
+  box-shadow: var(--spe-shadow);
+}
+body.index-page.spe-modern .spe-card {
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+body.index-page.spe-modern .spe-rise {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+body.index-page.spe-modern .spe-rise:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--spe-shadow-lg);
+}
+
+body.index-page.spe-modern .about .about-body > p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--spe-ink-muted);
+}
+
+body.index-page.spe-modern .about .about-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--spe-ink);
+  margin-top: 0.5rem;
+}
+
+body.index-page.spe-modern .about .about-list li {
+  padding-left: 2.25rem;
+  margin-bottom: 1.1rem;
+  color: var(--spe-ink-muted);
+  line-height: 1.65;
+}
+
+body.index-page.spe-modern .about .about-list li .bi {
+  color: var(--spe-accent);
+  font-size: 1.2rem;
+  top: 0.15rem;
+}
+
+/* ========== Stats band ========== */
+body.index-page.spe-modern #stats.stats.spe-stats-band {
+  padding: 72px 0;
+  background: transparent;
+  color: #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+body.index-page.spe-modern #stats.stats.spe-stats-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 50%,
+    color-mix(in srgb, #38bdf8 22%, transparent),
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+body.index-page.spe-modern #stats .row {
+  position: relative;
+  z-index: 1;
+}
+
+body.index-page.spe-modern #stats .spe-stat-card {
+  gap: 0.85rem;
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, #ffffff 36%, transparent) 0%,
+    color-mix(in srgb, #ffffff 28%, transparent) 100%
+  );
+  border: 1px solid color-mix(in srgb, #fff 45%, transparent);
+  border-radius: var(--spe-radius-lg);
+  padding: 2rem 1.25rem;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+body.index-page.spe-modern #stats .spe-stat-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, #fff 35%, transparent);
+}
+
+body.index-page.spe-modern #stats.stats i {
+  background: linear-gradient(145deg, #fff 0%, #e0f2fe 100%);
+  color: var(--spe-accent);
+  width: 58px;
+  height: 58px;
+  font-size: 1.35rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px color-mix(in srgb, #000 25%, transparent);
+}
+
+body.index-page.spe-modern #stats .stats-item span {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.03em;
+}
+
+body.index-page.spe-modern #stats .stats-item p {
+  color: color-mix(in srgb, #e2e8f0 75%, transparent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ========== Skills / values ========== */
+body.index-page.spe-modern #skills.skills {
+  /* gradient from main section scrim */
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 96%, transparent) 0%,
+    color-mix(in srgb, #f0f9ff 88%, transparent) 48%,
+    color-mix(in srgb, #e2e8f0 86%, transparent) 100%
+  );
+  border: 1px solid color-mix(in srgb, #ffffff 68%, transparent);
+  border-radius: var(--spe-radius-xl);
+}
+body.index-page.spe-modern .spe-skills-panel {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--spe-shadow);
+}
+
+body.index-page.spe-modern .skills .section-title p {
+  color: var(--spe-ink-muted);
+}
+
+body.index-page.spe-modern .skills .progress {
+  height: auto;
+  margin-bottom: 1rem;
+  padding: 1rem 1.15rem 1.1rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 88%, transparent) 0%,
+    color-mix(in srgb, #f8fafc 80%, transparent) 100%
+  );
+  border-radius: var(--spe-radius);
+  border: 1px solid color-mix(in srgb, #ffffff 35%, transparent);
+  box-shadow: 0 1px 2px color-mix(in srgb, #0f172a 5%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+body.index-page.spe-modern .skills .progress:last-child {
+  margin-bottom: 0;
+}
+
+body.index-page.spe-modern .skills .progress .skill {
+  font-family: var(--spe-font);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--spe-ink);
+  margin-bottom: 0.65rem;
+}
+
+body.index-page.spe-modern .skills .progress .skill .val {
+  color: var(--spe-accent);
+  font-weight: 800;
+}
+
+body.index-page.spe-modern .skills .progress-bar-wrap {
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--spe-ink) 8%, transparent);
+}
+
+body.index-page.spe-modern .skills .progress-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--spe-accent), #22d3ee);
+  box-shadow: 0 0 16px color-mix(in srgb, #22d3ee 45%, transparent);
+}
+
+/* ========== Portfolio ========== */
+body.index-page.spe-modern #portfolio.portfolio {
+  background: transparent;
+  border-radius: var(--spe-radius-lg);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, #ffffff 68%, transparent);
+  box-shadow: var(--spe-shadow);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 96%, transparent) 0%,
+    color-mix(in srgb, #f8fafc 90%, transparent) 100%
+  );
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+body.index-page.spe-modern .portfolio .portfolio-item:hover {
+  box-shadow: var(--spe-shadow-lg);
+  transform: translateY(-6px);
+}
+
+body.index-page.spe-modern .portfolio .portfolio-item img {
+  transition: transform 0.65s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+body.index-page.spe-modern .portfolio .portfolio-item:hover img {
+  transform: scale(1.06);
+}
+
+body.index-page.spe-modern .portfolio .portfolio-item .portfolio-info {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.1rem 3.25rem 1.15rem 1.15rem;
+  background: linear-gradient(
+    0deg,
+    color-mix(in srgb, #020617 96%, transparent) 0%,
+    color-mix(in srgb, #020617 45%, transparent) 55%,
+    transparent 100%
+  );
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body.index-page.spe-modern .portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  padding-right: 2.5rem;
+  line-height: 1.25;
+}
+
+body.index-page.spe-modern .portfolio .portfolio-item .portfolio-info p {
+  color: color-mix(in srgb, #e2e8f0 88%, transparent);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  padding-right: 2.5rem;
+}
+
+body.index-page.spe-modern .portfolio .portfolio-item .portfolio-info .preview-link {
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: color-mix(in srgb, #fff 18%, transparent);
+  color: #fff;
+  font-size: 1.15rem;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+body.index-page.spe-modern .portfolio .portfolio-item .portfolio-info .preview-link:hover {
+  background: var(--spe-accent);
+  color: #fff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Portfolio expand (preserved behaviour) */
+body.index-page.spe-modern #portfolio-items .portfolio-item--extra {
+  display: none;
+}
+
+body.index-page.spe-modern #portfolio-items.portfolio-expanded .portfolio-item--extra {
+  display: block;
+}
+
+body.index-page.spe-modern .portfolio-toggle-wrap {
+  margin-top: 2.5rem;
+}
+
+body.index-page.spe-modern .btn-see-more {
+  font-family: var(--spe-font);
+  border-radius: 999px;
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--spe-accent) 0%, var(--spe-accent-2) 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 28px var(--spe-accent-glow);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.index-page.spe-modern .btn-see-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px var(--spe-accent-glow);
+}
+
+/* ========== Services ========== */
+body.index-page.spe-modern #services.services {
+  background: transparent;
+}
+
+body.index-page.spe-modern .services .service-item {
+  border-radius: var(--spe-radius-lg);
+  border: 1px solid color-mix(in srgb, #ffffff 38%, transparent);
+  box-shadow: var(--spe-shadow);
+  padding: 2.5rem 1.75rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 90%, transparent) 0%,
+    color-mix(in srgb, #f8fafc 82%, transparent) 55%,
+    color-mix(in srgb, #e2e8f0 78%, transparent) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+body.index-page.spe-modern .services .service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--spe-shadow-lg);
+  border-color: color-mix(in srgb, var(--spe-accent) 25%, transparent);
+}
+
+body.index-page.spe-modern .services .service-item .icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  background: var(--spe-surface-2);
+  border: 1px solid var(--spe-border);
+}
+
+body.index-page.spe-modern .services .service-item h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--spe-ink);
+}
+
+body.index-page.spe-modern .services .service-item p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--spe-ink-muted);
+}
+
+/* ========== Contact ========== */
+body.index-page.spe-modern #contact.contact {
+  background: transparent;
+}
+
+body.index-page.spe-modern .spe-contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+body.index-page.spe-modern .contact .info-item + .info-item {
+  margin-top: 0;
+}
+
+body.index-page.spe-modern .contact .info-item {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 96%, transparent) 0%,
+    color-mix(in srgb, #f1f5f9 90%, transparent) 100%
+  );
+  border: 1px solid color-mix(in srgb, #ffffff 68%, transparent);
+  border-radius: var(--spe-radius);
+  padding: 1.25rem 1.35rem;
+  margin: 0;
+  box-shadow: 0 1px 2px color-mix(in srgb, #0f172a 8%, transparent);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.index-page.spe-modern .contact .info-item:hover {
+  border-color: color-mix(in srgb, var(--spe-accent) 35%, transparent);
+  box-shadow: var(--spe-shadow);
+}
+
+body.index-page.spe-modern .contact .info-item i {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-right: 14px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--spe-accent) 15%, #fff),
+    color-mix(in srgb, #22d3ee 12%, #fff)
+  );
+  color: var(--spe-accent);
+}
+
+body.index-page.spe-modern .contact .info-item:hover i {
+  background: linear-gradient(135deg, var(--spe-accent), var(--spe-accent-2));
+  color: #fff;
+}
+
+body.index-page.spe-modern .contact .info-item h3 {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--spe-ink-muted);
+  margin-bottom: 0.35rem;
+}
+
+body.index-page.spe-modern .contact .info-item p,
+body.index-page.spe-modern .contact .contact-email-list {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--spe-ink);
+}
+
+body.index-page.spe-modern .contact .contact-email-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.index-page.spe-modern .contact .contact-email-list li {
+  margin-bottom: 0.4rem;
+}
+
+body.index-page.spe-modern .contact .contact-email-list a {
+  color: var(--spe-accent);
+  font-weight: 600;
+  word-break: break-word;
+}
+
+body.index-page.spe-modern .contact .contact-email-list a:hover {
+  color: var(--spe-accent-2);
+}
+
+body.index-page.spe-modern .contact .info-item p a {
+  color: var(--spe-accent);
+  font-weight: 600;
+}
+
+body.index-page.spe-modern .spe-form-panel {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 96%, transparent) 0%,
+    color-mix(in srgb, #e2e8f0 88%, transparent) 100%
+  );
+  border: 1px solid color-mix(in srgb, #ffffff 68%, transparent);
+  border-radius: var(--spe-radius-xl);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  box-shadow: var(--spe-shadow-lg);
+}
+
+body.index-page.spe-modern .contact .php-email-form input[type="text"],
+body.index-page.spe-modern .contact .php-email-form input[type="email"],
+body.index-page.spe-modern .contact .php-email-form textarea {
+  font-family: var(--spe-font);
+  border-radius: 12px;
+  border: 1px solid var(--spe-border);
+  padding: 0.85rem 1.1rem;
+  font-size: 0.95rem;
+  background: color-mix(in srgb, var(--spe-surface-2) 88%, transparent);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.index-page.spe-modern .contact .php-email-form input:focus,
+body.index-page.spe-modern .contact .php-email-form textarea:focus {
+  border-color: var(--spe-accent);
+  box-shadow: 0 0 0 4px var(--spe-accent-glow);
+  background: color-mix(in srgb, var(--spe-surface) 95%, transparent);
+}
+
+body.index-page.spe-modern .contact .php-email-form button[type="submit"] {
+  font-family: var(--spe-font);
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.85rem 2.5rem;
+  background: linear-gradient(135deg, var(--spe-accent) 0%, var(--spe-accent-2) 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 10px 28px var(--spe-accent-glow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.index-page.spe-modern .contact .php-email-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px var(--spe-accent-glow);
+}
+
+body.index-page.spe-modern .contact .php-email-form .error-message,
+body.index-page.spe-modern .contact .php-email-form .sent-message,
+body.index-page.spe-modern .contact .php-email-form .loading {
+  border-radius: 12px;
+}
+
+/* ========== Footer ========== */
+body.index-page.spe-modern #footer.footer {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      color-mix(in srgb, #38bdf8 32%, transparent) 50%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, #1e293b 86%, transparent) 0%,
+      color-mix(in srgb, #0f172a 92%, transparent) 38%,
+      color-mix(in srgb, #020617 96%, transparent) 100%
+    );
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  color: #94a3b8;
+  padding: 3.25rem 0 2.25rem;
+  border-top: 1px solid color-mix(in srgb, #ffffff 32%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, #ffffff 8%, transparent);
+}
+
+body.index-page.spe-modern #footer.footer > .container {
+  position: relative;
+  z-index: 1;
+}
+
+body.index-page.spe-modern #footer.footer h3 {
+  font-size: clamp(1.35rem, 3vw, 1.65rem);
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.65rem;
+}
+
+body.index-page.spe-modern #footer.footer p {
+  color: color-mix(in srgb, #cbd5e1 92%, transparent);
+  font-style: normal;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.75rem;
+}
+
+body.index-page.spe-modern #footer.footer .social-links {
+  margin-bottom: 2rem;
+}
+
+body.index-page.spe-modern #footer.footer .social-links a {
+  border-radius: 14px;
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, #ffffff 14%, transparent),
+    color-mix(in srgb, #ffffff 6%, transparent)
+  );
+  border: 1px solid color-mix(in srgb, #ffffff 18%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+body.index-page.spe-modern #footer.footer .social-links a:hover {
+  background: linear-gradient(135deg, var(--spe-accent), var(--spe-accent-2));
+  border-color: transparent;
+}
+
+body.index-page.spe-modern #footer.footer .copyright {
+  padding-top: 1.75rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid color-mix(in srgb, #ffffff 12%, transparent);
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+body.index-page.spe-modern #footer.footer .copyright strong {
+  color: #e2e8f0;
+  font-weight: 700;
+}
+
+/* ========== Scroll top ========== */
+body.index-page.spe-modern .scroll-top {
+  border-radius: 14px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--spe-accent), var(--spe-accent-2));
+  box-shadow: 0 8px 24px var(--spe-accent-glow);
+}
+
+/* ========== Mobile nav ========== */
+@media (max-width: 768px) {
+  body.index-page.spe-modern .navmenu ul {
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, #ffffff 20%, transparent) 0%,
+      color-mix(in srgb, #f8fafc 12%, transparent) 100%
+    );
+    backdrop-filter: blur(22px) saturate(1.35);
+    -webkit-backdrop-filter: blur(22px) saturate(1.35);
+    border-radius: var(--spe-radius);
+    border: 1px solid color-mix(in srgb, #ffffff 30%, transparent);
+    margin-top: 0.75rem;
+    padding: 0.5rem 0;
+    box-shadow: 0 12px 40px -8px color-mix(in srgb, #020617 25%, transparent);
+  }
+
+  body.index-page.spe-modern .navmenu ul.show {
+    padding: 0.75rem 0.5rem;
+  }
+
+  body.index-page.spe-modern .navmenu li {
+    margin: 4px 0;
+  }
+
+  body.index-page.spe-modern .navmenu a {
+    border-radius: 10px;
+  }
+
+  body.index-page.spe-modern section.section {
+    padding: 64px 0;
+  }
+
+  body.index-page.spe-modern #stats .spe-stat-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Make images and portfolio items responsive */
+body.index-page.spe-modern .portfolio .portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive tweaks: desktop → tablet → mobile */
+@media (max-width: 1200px) {
+  body.index-page.spe-modern .home .hero-container {
+    max-width: 820px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  body.index-page.spe-modern .section-title h2 {
+    font-size: clamp(1.6rem, 3.8vw, 2.15rem);
+  }
+}
+
+@media (max-width: 991px) {
+  body.index-page.spe-modern .navmenu {
+    padding: 10px 14px;
+  }
+
+  body.index-page.spe-modern .nav-logo img {
+    height: 40px;
+  }
+
+  body.index-page.spe-modern .navmenu a {
+    font-size: 0.88rem;
+    padding: 0.45rem 0.8rem;
+  }
+
+  body.index-page.spe-modern .home.spe-hero {
+    min-height: max(460px, calc(70vh - 72px));
+  }
+
+  body.index-page.spe-modern .home .hero-brand-img {
+    max-width: min(560px, 80%);
+    max-height: 38vh;
+  }
+
+  body.index-page.spe-modern .home .hero-copy {
+    padding: 1rem 1rem;
+    border-radius: 16px;
+    max-width: 92%;
+  }
+
+  body.index-page.spe-modern .spe-card,
+  body.index-page.spe-modern .spe-skills-panel,
+  body.index-page.spe-modern .spe-form-panel {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  body.index-page.spe-modern #stats .spe-stat-card {
+    padding: 1.3rem;
+  }
+
+  body.index-page.spe-modern #stats .stats-item span {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  body.index-page.spe-modern .portfolio .portfolio-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  body.index-page.spe-modern .navmenu {
+    padding: 8px 12px;
+  }
+
+  body.index-page.spe-modern .navmenu a {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.82rem;
+  }
+
+  body.index-page.spe-modern .home .hero-tagline {
+    font-size: 1.15rem;
+  }
+
+  body.index-page.spe-modern .home .hero-brand-img {
+    max-width: 100%;
+    max-height: 36vh;
+    padding: 0 0.5rem;
+  }
+
+  body.index-page.spe-modern section.section {
+    padding: 56px 0;
+  }
+
+  body.index-page.spe-modern .skills .progress .skill {
+    font-size: 0.75rem;
+  }
+
+  body.index-page.spe-modern .skills .progress-bar-wrap {
+    height: 6px;
+  }
+
+  body.index-page.spe-modern .scroll-top {
+    width: 44px;
+    height: 44px;
+  }
+}

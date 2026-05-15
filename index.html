@@ -18,7 +18,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,6 +29,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/spe-modern.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MyResume
@@ -39,14 +40,16 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="index-page spe-modern">
+
+  <a class="skip-link" href="#home">Skip to content</a>
 
   <header id="header" class="header d-flex flex-column justify-content-center">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <nav id="navmenu" class="navmenu">
       <div class="nav-logo">
-        <a href="">
+        <a href="#home" aria-label="Science Park Engineering home">
           <img src="./assets/img/logo (2).png" alt="Science Park Engineering Logo" />
         </a>
         <span class="nav-title">Science Park Engineering</span>
@@ -65,24 +68,41 @@
       </ul>
     </nav>
     <script>
-      document.querySelector('.hamburger').addEventListener('click', function () {
-        const navMenu = document.querySelector('.navmenu ul');
-        navMenu.classList.toggle('show');
-        this.classList.toggle('active');
-      });
-    </script>    
+      (function () {
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.navmenu ul');
+        if (!hamburger || !navMenu) return;
+        hamburger.addEventListener('click', function () {
+          navMenu.classList.toggle('show');
+          hamburger.classList.toggle('active');
+        });
+        navMenu.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          link.addEventListener('click', function () {
+            navMenu.classList.remove('show');
+            hamburger.classList.remove('active');
+          });
+        });
+      })();
+    </script>
   </header>
 
   <main class="main">
 
-    <!-- Home Section -->
-    <section id="home" class="home section light-background">
-      <img src="assets/img/home-bg.jpg" alt="Background Image - Laboratory Equipment Provider"> <!-- Background image -->
-      
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <img src="assets/img/sc-Photoroom.png" alt="Science Park Engineering Logo" class="image-replace"> <!-- Image replacing text -->
+    <!-- Home: full-width brand image; glass info card below -->
+    <section id="home" class="home section light-background hero-enhanced spe-hero" aria-labelledby="hero-heading">
+      <div class="hero-brand-bleed">
+        <img src="assets/img/sc-Photoroom.png" alt="Science Park Engineering" class="hero-brand-img" width="900" decoding="async">
+      </div>
+      <div class="container hero-container" data-aos="zoom-out">
+        <div class="hero-stack">
+          <div class="hero-copy">
+            <p class="hero-eyebrow"><span class="hero-eyebrow__mark" aria-hidden="true"></span>Science Park Engineering</p>
+            <h1 id="hero-heading" class="hero-tagline">Laboratory equipment &amp; scientific instruments for Bangladesh</h1>
+            <p class="hero-lead">Trusted supply, installation, and support for pharma, universities, research labs, and industry.</p>
+            <div class="hero-actions">
+              <a class="btn-spe btn-spe-primary" href="#contact">Get a quote</a>
+              <a class="btn-spe btn-spe-outline" href="#portfolio">Browse products</a>
+            </div>
           </div>
         </div>
       </div>
@@ -90,71 +110,78 @@
     
     <!-- About Section -->
     <section id="about" class="about section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h1>About Science Park Engineering</h1>
-          <h2>Top Laboratory Equipment Provider in Bangladesh</h2>
-        </div>
-        <div class="about-content">
-          <p>
-            Science Park Engineering is a leading provider, importer, and supplier of laboratory equipment in Bangladesh. We specialize in offering a wide range of scientific instruments, chemicals, reagents, and consumables to sectors such as pharmaceuticals, universities, research institutes, dyeing and knitting industries, and more.
-          </p>
-          <h3>Our Product Portfolio Includes:</h3>
-          <ul>
-            <li>Laboratory equipment and instruments like chromatography systems, testing meters, lab glassware, and plasticware.</li>
-            <li>Textile testing equipment, pharmaceutical instruments, raw materials, and industrial QC products.</li>
-            <li>Kits and tools for chemistry, biology, microbiology, physics, chemical and water testing, environmental studies, and fisheries.</li>
-          </ul>
-          <p>
-            Customer satisfaction is the driving force behind our operations. As a committed service provider, we aim to grow alongside our clients by consistently meeting their demands and delivering reliable solutions.
-          </p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Science Park Engineering</h2>
+        <p>Leading laboratory equipment supplier in Bangladesh—serving pharmaceuticals, education, research, textiles, and industrial quality control.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="80">
+        <div class="spe-about-shell">
+          <div class="spe-card spe-rise">
+            <div class="about-body about-content">
+              <p>
+                Science Park Engineering is a leading provider, importer, and supplier of laboratory equipment in Bangladesh. We offer scientific instruments, chemicals, reagents, and consumables tailored to your sector.
+              </p>
+              <h3>What we supply</h3>
+              <ul class="about-list">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Laboratory instruments—chromatography, meters, glassware, and plasticware.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Textile testing, pharmaceutical tools, raw materials, and industrial QC products.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Kits for chemistry, biology, microbiology, water and environmental testing, and more.</li>
+              </ul>
+              <p>
+                Customer satisfaction drives our work. We aim to grow with our clients by meeting their needs with dependable products and responsive service.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    
-
-      
-
-    </section><!-- /About Section -->
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section">
+    <section id="stats" class="stats section spe-stats-band">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
 
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-emoji-smile"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="132" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
+          <div class="col-lg-3 col-md-6 d-flex">
+            <div class="spe-stat-card w-100 d-flex flex-column align-items-center">
+              <i class="bi bi-emoji-smile" aria-hidden="true"></i>
+              <div class="stats-item">
+                <span data-purecounter-start="0" data-purecounter-end="132" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Happy Clients</p>
+              </div>
             </div>
-          </div><!-- End Stats Item -->
+          </div>
 
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-journal-richtext"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="133" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+          <div class="col-lg-3 col-md-6 d-flex">
+            <div class="spe-stat-card w-100 d-flex flex-column align-items-center">
+              <i class="bi bi-journal-richtext" aria-hidden="true"></i>
+              <div class="stats-item">
+                <span data-purecounter-start="0" data-purecounter-end="133" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Projects</p>
+              </div>
             </div>
-          </div><!-- End Stats Item -->
+          </div>
 
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-headset"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+          <div class="col-lg-3 col-md-6 d-flex">
+            <div class="spe-stat-card w-100 d-flex flex-column align-items-center">
+              <i class="bi bi-headset" aria-hidden="true"></i>
+              <div class="stats-item">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Support</p>
+              </div>
             </div>
-          </div><!-- End Stats Item -->
+          </div>
 
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-people"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
+          <div class="col-lg-3 col-md-6 d-flex">
+            <div class="spe-stat-card w-100 d-flex flex-column align-items-center">
+              <i class="bi bi-people" aria-hidden="true"></i>
+              <div class="stats-item">
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hard Workers</p>
+              </div>
             </div>
-          </div><!-- End Stats Item -->
+          </div>
 
         </div>
 
@@ -167,16 +194,14 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Values at Science Park Engineering</h2>
-        <p>At Science Park Engineering, we uphold a strong foundation of honesty and integrity in all our dealings. We are committed to keeping our promises and standing by our commitments. Our team values respect for the rights and beliefs of others, ensuring that all interactions are fair and just.
-
-          Humility and empathy are core to our values. We strive to understand and consider the perspectives of others through our actions and words. Our collaborative approach enables us to work together efficiently, focusing on achieving our shared goals.
-          
-          We support and encourage each other’s efforts, fostering a culture of mutual respect and teamwork to drive progress and success.</p>
+        <h2>Our values</h2>
+        <p>We build relationships on honesty and integrity, and we follow through on what we promise. Our team treats clients and colleagues with respect so every interaction stays fair and professional.</p>
+        <p>Humility and empathy guide how we listen and respond. We collaborate openly so we can reach shared goals efficiently, and we support each other to keep improving.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+        <div class="spe-skills-panel">
         <div class="row skills-content skills-animation">
 
           <div class="col-lg-6">
@@ -223,29 +248,24 @@
             <div class="progress">
               <span class="skill"><span>EXCELLENCE</span> <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
 
           </div>
 
         </div>
+        </div>
 
       </div>
 
     </section><!-- /Skills Section -->
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      
-
-      <section id="portfolio" class="portfolio section">
+    <section id="portfolio" class="portfolio section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-          <h2>Our Products</h2>
-          <p>At Science Park Engineering, we are committed to delivering high-quality solutions tailored to your needs. Explore our portfolio to see the innovative projects we’ve worked on, each designed with precision and excellence.</p>
+          <h2>Our products</h2>
+          <p>A sample of the instruments and systems we supply. Tap an image to view it larger, or contact us for specifications and availability.</p>
       </div>
   
       <div class="container">
@@ -300,7 +320,7 @@
                   </div>
               </div>
               <!-- Remaining items (7-17) -->
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/7.jpg" class="img-fluid" alt="Microscope">
                   <div class="portfolio-info">
                       <h4>Microscope</h4>
@@ -308,7 +328,7 @@
                       <a href="assets/img/7.jpg" title="Microscope" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/8.jpg" class="img-fluid" alt="Muffle Furnace">
                   <div class="portfolio-info">
                       <h4>Muffle Furnace</h4>
@@ -316,7 +336,7 @@
                       <a href="assets/img/8.jpg" title="Muffle Furnace" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/9.jpg" class="img-fluid" alt="Forced Air Oven">
                   <div class="portfolio-info">
                       <h4>Forced Air Oven</h4>
@@ -324,7 +344,7 @@
                       <a href="assets/img/9.jpg" title="Forced Air Oven" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/10.jpg" class="img-fluid" alt="Autoclave">
                   <div class="portfolio-info">
                       <h4>Autoclave</h4>
@@ -332,7 +352,7 @@
                       <a href="assets/img/10.jpg" title="Autoclave" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/11.jpg" class="img-fluid" alt="Centrifuge">
                   <div class="portfolio-info">
                       <h4>Centrifuge</h4>
@@ -340,7 +360,7 @@
                       <a href="assets/img/11.jpg" title="Centrifuge" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/12.jpg" class="img-fluid" alt="Distillation Apparatus">
                   <div class="portfolio-info">
                       <h4>Distillation Apparatus</h4>
@@ -348,7 +368,7 @@
                       <a href="assets/img/12.jpg" title="Distillation Apparatus" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/13.jpg" class="img-fluid" alt="Flame Photometer">
                   <div class="portfolio-info">
                       <h4>Flame Photometer</h4>
@@ -356,7 +376,7 @@
                       <a href="assets/img/13.jpg" title="Flame Photometer" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/14.jpg" class="img-fluid" alt="Orbital Shaker">
                   <div class="portfolio-info">
                       <h4>Orbital Shaker</h4>
@@ -364,7 +384,7 @@
                       <a href="assets/img/14.jpg" title="Orbital Shaker" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/15.jpg" class="img-fluid" alt="DR6000 Hach Spectrophotometer">
                   <div class="portfolio-info">
                     <h4>DR6000 Hach Spectrophotometer</h4>
@@ -372,7 +392,7 @@
                       <a href="assets/img/15.jpg" title="DR6000 Hach Spectrophotometer" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/16.jpg" class="img-fluid" alt="Flake Ice Maker">
                   <div class="portfolio-info">
                     <h4>Flake Ice Maker</h4>
@@ -380,7 +400,7 @@
                       <a href="assets/img/16.jpg" title="Flake Ice Maker" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                   <img src="assets/img/17.jpg" class="img-fluid" alt="Water Purifier">
                   <div class="portfolio-info">
                     <h4>Water Purifier</h4>
@@ -389,76 +409,67 @@
                       <a href="assets/img/17.jpg" title="Water Purifier" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                 <img src="assets/img/18.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <a href="assets/img/18.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                 <img src="assets/img/19.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <a href="assets/img/19.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                 <img src="assets/img/20.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <a href="assets/img/20.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                 <img src="assets/img/21.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <a href="assets/img/21.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                 <img src="assets/img/22.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <a href="assets/img/22.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                 <img src="assets/img/23.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <a href="assets/img/23.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="display: none;">
+              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
                 <img src="assets/img/24.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <a href="assets/img/24.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
           </div>
-          <!-- See More Button -->
-          <div style="text-align: center; margin-top: 20px;">
-              <button id="see-more-btn" onclick="toggleProducts()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px;">See More</button>
+          <div class="portfolio-toggle-wrap">
+              <button type="button" id="see-more-btn" class="btn-see-more" aria-expanded="false" aria-controls="portfolio-items">See more products</button>
           </div>
       </div>
   </section>
   
   <script>
-      function toggleProducts() {
-          const items = document.querySelectorAll("#portfolio-items .portfolio-item");
-          const btn = document.getElementById("see-more-btn");
-          const isExpanded = btn.getAttribute("data-expanded") === "true";
-  
-          items.forEach((item, index) => {
-              if (index >= 6) {
-                  item.style.display = isExpanded ? "none" : "block";
-              }
-          });
-  
-          btn.textContent = isExpanded ? "See More" : "See Less";
-          btn.setAttribute("data-expanded", !isExpanded);
-      }
-  </script><!-- End Portfolio Section -->
-      <!-- End Portfolio Section -->
-<!-- End Portfolio Section -->
-
-    <!-- /Portfolio Section -->
+      (function () {
+        var grid = document.getElementById('portfolio-items');
+        var btn = document.getElementById('see-more-btn');
+        if (!grid || !btn) return;
+        btn.addEventListener('click', function () {
+          var expanded = grid.classList.toggle('portfolio-expanded');
+          btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+          btn.textContent = expanded ? 'Show fewer products' : 'See more products';
+        });
+      })();
+  </script>
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -478,7 +489,7 @@
               <div class="icon">
                 <i class="bi bi-cart"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Supply</h3>
               </a>
               <p>We provide high-quality products, sourced from trusted manufacturers, to meet your business or project needs.</p>
@@ -491,7 +502,7 @@
               <div class="icon">
                 <i class="bi bi-gear"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Installation</h3>
               </a>
               <p>Our team ensures that all products and systems are properly installed to guarantee seamless operation and optimal performance.</p>
@@ -504,7 +515,7 @@
               <div class="icon">
                 <i class="bi bi-check-circle"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Commission</h3>
               </a>
               <p>We carry out the final commissioning process to ensure that all systems are fully functional and meet your specifications before going live.</p>
@@ -517,7 +528,7 @@
               <div class="icon">
                 <i class="bi bi-tools"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Servicing</h3>
               </a>
               <p>We provide ongoing maintenance and servicing to ensure that your systems operate at peak efficiency and remain in top condition.</p>
@@ -530,7 +541,7 @@
               <div class="icon">
                 <i class="bi bi-person"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Consultation</h3>
               </a>
               <p>Our expert team offers consultations to help you plan, design, and implement systems tailored to your specific needs.</p>
@@ -543,7 +554,7 @@
               <div class="icon">
                 <i class="bi bi-life-preserver"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Support</h3>
               </a>
               <p>We provide continuous support to assist with troubleshooting and ensuring smooth operation of your systems.</p>
@@ -558,131 +569,146 @@
     
 
 <!-- Contact Section -->
-<!-- Contact Section -->
 <section id="contact" class="contact section">
-  <!-- Contact Section -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Contact</h2>
-    <p>Feel free to reach out to us with any inquiries or requests. We're here to help!</p>
+    <p>Questions about products, pricing, or service? Send a message or reach us directly—we typically reply within one business day.</p>
   </div>
 
   <div class="container" data-aos="fade" data-aos-delay="100">
     <div class="row gy-4">
 
-      <!-- Contact Information -->
       <div class="col-lg-4">
+        <div class="spe-contact-stack">
         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-          <i class="bi bi-geo-alt flex-shrink-0"></i>
+          <i class="bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
           <div>
-            <h3>Registered Address</h3>
+            <h3>Registered address</h3>
             <p>14, Kakrail, 3rd floor, Room No: 06, Dhaka-1000</p>
           </div>
         </div>
         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-          <i class="bi bi-geo-alt flex-shrink-0"></i>
+          <i class="bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
           <div>
-            <h3>Corporate Address</h3>
+            <h3>Corporate address</h3>
             <p>10, Kader Tropical heights, G-23/C, Tikatuli, Hathkhola, Dhaka-1203</p>
           </div>
         </div>
         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-          <i class="bi bi-telephone flex-shrink-0"></i>
+          <i class="bi bi-telephone flex-shrink-0" aria-hidden="true"></i>
           <div>
-            <h3>Call Us</h3>
-            <p>01864-226212, 01922-406225</p>
+            <h3>Phone</h3>
+            <p>
+              <a href="tel:+8801864226212">01864-226212</a><br>
+              <a href="tel:+8801922406225">01922-406225</a>
+            </p>
           </div>
         </div>
         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-          <i class="bi bi-envelope flex-shrink-0"></i>
+          <i class="bi bi-envelope flex-shrink-0" aria-hidden="true"></i>
           <div>
-            <h3>Email Us</h3>
-            <p>scienceparkengineering18@gmail.com, scienceparkengineering@gmail.com, tariful94@gmail.com</p>
+            <h3>Email</h3>
+            <ul class="contact-email-list">
+              <li><a href="mailto:scienceparkengineering18@gmail.com">scienceparkengineering18@gmail.com</a></li>
+              <li><a href="mailto:scienceparkengineering@gmail.com">scienceparkengineering@gmail.com</a></li>
+              <li><a href="mailto:tariful94@gmail.com">tariful94@gmail.com</a></li>
+            </ul>
           </div>
+        </div>
         </div>
       </div>
 
-      <!-- Contact Form -->
       <div class="col-lg-8">
+        <div class="spe-form-panel">
         <form id="contact-form" action="https://formspree.io/f/xyzyldwk" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
           <div class="row gy-4">
 
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              <label class="visually-hidden" for="contact-name">Your name</label>
+              <input id="contact-name" type="text" name="name" class="form-control" placeholder="Your name" autocomplete="name" required>
             </div>
 
             <div class="col-md-6">
-              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              <label class="visually-hidden" for="contact-email">Your email</label>
+              <input id="contact-email" type="email" name="email" class="form-control" placeholder="Your email" autocomplete="email" required>
             </div>
 
             <div class="col-md-12">
-              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+              <label class="visually-hidden" for="contact-subject">Subject</label>
+              <input id="contact-subject" type="text" name="subject" class="form-control" placeholder="Subject" required>
             </div>
 
             <div class="col-md-12">
-              <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+              <label class="visually-hidden" for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" class="form-control" rows="6" placeholder="How can we help?" required></textarea>
             </div>
 
             <div class="col-md-12 text-center">
-              <div class="loading" style="display:none;">Loading...</div>
-              <div class="error-message" style="display:none;"></div>
-              <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
+              <div class="loading" style="display:none;" aria-live="polite">Sending…</div>
+              <div class="error-message" style="display:none;" role="alert" aria-live="assertive"></div>
+              <div class="sent-message" style="display:none;" role="status" aria-live="polite">Your message has been sent. Thank you!</div>
 
-              <button type="submit">Send Message</button>
+              <button type="submit">Send message</button>
             </div>
 
           </div>
         </form>
+        </div>
       </div>
     </div>
   </div>
 
   <script>
-    // Handling form submission with Fetch API
-    const form = document.getElementById('contact-form');
-    const loadingMessage = document.querySelector('.loading');
-    const sentMessage = document.querySelector('.sent-message');
-    const errorMessage = document.querySelector('.error-message');
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      var loadingMessage = form.querySelector('.loading');
+      var sentMessage = form.querySelector('.sent-message');
+      var errorMessage = form.querySelector('.error-message');
 
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault(); // Prevent default form submission
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
 
-      // Show the loading spinner
-      loadingMessage.style.display = 'block';
-      sentMessage.style.display = 'none';
-      errorMessage.style.display = 'none';
+        if (loadingMessage) loadingMessage.style.display = 'block';
+        if (sentMessage) sentMessage.style.display = 'none';
+        if (errorMessage) {
+          errorMessage.style.display = 'none';
+          errorMessage.textContent = '';
+        }
 
-      try {
-        // Perform the POST request with FormData
-        const response = await fetch(form.action, {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest',  // Prevents redirect to thanks page
-          },
-          body: new FormData(form),
-        });
+        try {
+          var response = await fetch(form.action, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'X-Requested-With': 'XMLHttpRequest',
+            },
+            body: new FormData(form),
+          });
 
-        loadingMessage.style.display = 'none'; // Hide the loading spinner
+          if (loadingMessage) loadingMessage.style.display = 'none';
 
-        // Handle the response from Formspree or the server
-        if (response.ok) {
-          const data = await response.json();
-          if (data.ok) {
-            sentMessage.style.display = 'block'; // Show the success message
-            form.reset(); // Reset the form
+          if (response.ok) {
+            var data = await response.json();
+            if (data.ok) {
+              if (sentMessage) sentMessage.style.display = 'block';
+              form.reset();
+            } else {
+              throw new Error('Failed to send message');
+            }
           } else {
             throw new Error('Failed to send message');
           }
-        } else {
-          throw new Error('Failed to send message');
+        } catch (err) {
+          if (loadingMessage) loadingMessage.style.display = 'none';
+          if (errorMessage) {
+            errorMessage.style.display = 'block';
+            errorMessage.textContent = 'Something went wrong. Please try again later, or email us directly.';
+          }
+          console.error(err);
         }
-      } catch (error) {
-        loadingMessage.style.display = 'none'; // Hide the loading spinner
-        errorMessage.style.display = 'block'; // Show the error message
-        errorMessage.textContent = 'Something went wrong. Please try again later.';
-        console.error(error); // Log the error for debugging
-      }
-    });
+      });
+    })();
   </script>
 </section>
 
@@ -694,9 +720,9 @@
   <footer id="footer" class="footer position-relative light-background">
     <div class="container">
       <h3 class="sitename">Science Park Engineering</h3>
-      <p></p>
+      <p>Laboratory equipment and scientific instruments across Bangladesh.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/scienceparkeng?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.facebook.com/scienceparkeng?mibextid=ZbWKwL" aria-label="Science Park Engineering on Facebook" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
