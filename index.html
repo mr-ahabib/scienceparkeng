@@ -3,757 +3,409 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Meta Titles and Descriptions -->
   <title>Science Park Engineering - Leading Laboratory Equipment Supplier in Bangladesh</title>
   <meta name="description" content="Science Park Engineering is a top provider of laboratory equipment, scientific instruments, chemicals, and testing tools for research and industrial applications in Bangladesh.">
   <meta name="keywords" content="Science Park Engineering, laboratory equipment, scientific instruments, lab supplies, testing tools, Bangladesh laboratory supplier, scientific research equipment, pharmaceuticals instruments, industrial QC products">
   <meta name="author" content="Science Park Engineering">
+  <meta name="theme-color" content="#0b1a33">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/spe-modern.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/site.css?v=20261122g" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<body class="index-page spe-modern">
+<body>
 
-  <a class="skip-link" href="#home">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <nav id="navmenu" class="navmenu">
-      <div class="nav-logo">
-        <a href="#home" aria-label="Science Park Engineering home">
-          <img src="./assets/img/logo (2).png" alt="Science Park Engineering Logo" />
-        </a>
-        <span class="nav-title">Science Park Engineering</span>
-      </div>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul>
-        <li><a href="#home" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About Us</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Products</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
-    <script>
-      (function () {
-        var hamburger = document.querySelector('.hamburger');
-        var navMenu = document.querySelector('.navmenu ul');
-        if (!hamburger || !navMenu) return;
-        hamburger.addEventListener('click', function () {
-          navMenu.classList.toggle('show');
-          hamburger.classList.toggle('active');
-        });
-        navMenu.querySelectorAll('a[href^="#"]').forEach(function (link) {
-          link.addEventListener('click', function () {
-            navMenu.classList.remove('show');
-            hamburger.classList.remove('active');
-          });
-        });
-      })();
-    </script>
+  <header class="site-header">
+    <div class="wrap site-header__row">
+      <a class="brand" href="index.html" aria-label="Science Park Engineering home">
+        <img src="assets/img/logo%20(2).png" alt="" width="603" height="413">
+        <span class="brand__name">Science Park Engineering<small>Quality Scientific Works</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="bi bi-list" aria-hidden="true"></i></button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <div class="nav__links">
+          <a href="#about">About</a>
+          <a href="products.html">Products</a>
+          <a href="product-line.html">Product line</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+          <a href="assets/docs/science-park-engineering-company-profile.pdf" download="Science-Park-Engineering-Company-Profile.pdf"><i class="bi bi-download" aria-hidden="true"></i>Profile</a>
+        </div>
+        <a class="btn btn--primary btn--sm nav__cta" href="#contact">Get a quote</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="main">
+  <main id="main">
 
-    <!-- Home: full-width brand image; glass info card below -->
-    <section id="home" class="home section light-background hero-enhanced spe-hero" aria-labelledby="hero-heading">
-      <div class="hero-brand-bleed">
-        <img src="assets/img/sc-Photoroom.png" alt="Science Park Engineering" class="hero-brand-img" width="900" decoding="async">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="wrap">
+        <div class="hero__copy">
+          <p class="eyebrow">Laboratory supplier · Dhaka, Bangladesh</p>
+          <h1 id="hero-heading" class="display">Laboratory equipment &amp; scientific instruments for <em>Bangladesh</em></h1>
+          <p class="lead">Trusted supply, installation, and support for pharma, universities, research labs, and industry.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="products.html">Browse products <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            <a class="btn btn--ghost" href="assets/docs/science-park-engineering-company-profile.pdf" download="Science-Park-Engineering-Company-Profile.pdf"><i class="bi bi-download" aria-hidden="true"></i> Company profile</a>
+          </div>
+          <ul class="hero__sectors" aria-label="Sectors we serve">
+            <li>Pharmaceuticals</li>
+            <li>Education</li>
+            <li>Research</li>
+            <li>Textiles</li>
+            <li>Industrial QC</li>
+          </ul>
+        </div>
+
+        <div class="shelf">
+          <a class="specimen" href="products.html#orbital-shaker">
+            <img src="assets/img/14.jpg" alt="Orbital Shaker" width="499" height="394">
+            <span class="specimen__tag"><span>No. 14</span><span>Orbital Shaker</span></span>
+          </a>
+          <a class="specimen" href="products.html#ph-meter">
+            <img src="assets/img/1.jpg" alt="pH Meter" width="554" height="554">
+            <span class="specimen__tag"><span>No. 01</span><span>pH Meter</span></span>
+          </a>
+          <a class="specimen" href="products.html#microscope">
+            <img src="assets/img/7.jpg" alt="Microscope" width="554" height="554">
+            <span class="specimen__tag"><span>No. 07</span><span>Microscope</span></span>
+          </a>
+          <a class="specimen" href="products.html#analytical-balance">
+            <img src="assets/img/18.jpg" alt="Analytical Balance" width="1179" height="1500">
+            <span class="specimen__tag"><span>No. 18</span><span>Analytical Balance</span></span>
+          </a>
+          <a class="specimen" href="products.html#centrifuge">
+            <img src="assets/img/11.jpg" alt="Centrifuge" width="554" height="554">
+            <span class="specimen__tag"><span>No. 11</span><span>Centrifuge</span></span>
+          </a>
+        </div>
       </div>
-      <div class="container hero-container" data-aos="zoom-out">
-        <div class="hero-stack">
-          <div class="hero-copy">
-            <p class="hero-eyebrow"><span class="hero-eyebrow__mark" aria-hidden="true"></span>Science Park Engineering</p>
-            <h1 id="hero-heading" class="hero-tagline">Laboratory equipment &amp; scientific instruments for Bangladesh</h1>
-            <p class="hero-lead">Trusted supply, installation, and support for pharma, universities, research labs, and industry.</p>
-            <div class="hero-actions">
-              <a class="btn-spe btn-spe-primary" href="#contact">Get a quote</a>
-              <a class="btn-spe btn-spe-outline" href="#portfolio">Browse products</a>
-            </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section--tint">
+      <div class="wrap about__grid">
+        <div class="about__media reveal">
+          <img src="assets/img/lab.jpg" alt="A scientist examining a sample through a laboratory microscope" width="1400" height="933" loading="lazy">
+          <div class="about__badge"><small>What we do</small>Supply, installation, commissioning &amp; servicing</div>
+        </div>
+        <div class="about__copy reveal" style="--d:120ms">
+          <p class="eyebrow">About us</p>
+          <h2 class="display">A leading laboratory equipment supplier in <em>Bangladesh</em></h2>
+          <p>Science Park Engineering is a leading provider, importer, and supplier of laboratory equipment in Bangladesh. We offer scientific instruments, chemicals, reagents, and consumables tailored to your sector — serving pharmaceuticals, education, research, textiles, and industrial quality control.</p>
+          <ul class="checklist">
+            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Laboratory instruments — chromatography, meters, glassware, and plasticware.</span></li>
+            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Textile testing, pharmaceutical tools, raw materials, and industrial QC products.</span></li>
+            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Kits for chemistry, biology, microbiology, water and environmental testing, and more.</span></li>
+          </ul>
+          <p>Customer satisfaction drives our work. We aim to grow with our clients by meeting their needs with dependable products and responsive service.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" aria-label="Company in numbers">
+      <div class="wrap">
+        <div class="stats__grid reveal">
+          <div class="stat">
+            <span class="stat__icon"><i class="bi bi-emoji-smile" aria-hidden="true"></i></span>
+            <div class="stat__num" data-count="132">132</div>
+            <p class="stat__label">Happy clients</p>
+          </div>
+          <div class="stat">
+            <span class="stat__icon"><i class="bi bi-journal-check" aria-hidden="true"></i></span>
+            <div class="stat__num" data-count="133">133</div>
+            <p class="stat__label">Projects</p>
+          </div>
+          <div class="stat">
+            <span class="stat__icon"><i class="bi bi-headset" aria-hidden="true"></i></span>
+            <div class="stat__num" data-count="1463">1,463</div>
+            <p class="stat__label">Hours of support</p>
+          </div>
+          <div class="stat">
+            <span class="stat__icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+            <div class="stat__num" data-count="15">15</div>
+            <p class="stat__label">Hard workers</p>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About Science Park Engineering</h2>
-        <p>Leading laboratory equipment supplier in Bangladesh—serving pharmaceuticals, education, research, textiles, and industrial quality control.</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="80">
-        <div class="spe-about-shell">
-          <div class="spe-card spe-rise">
-            <div class="about-body about-content">
-              <p>
-                Science Park Engineering is a leading provider, importer, and supplier of laboratory equipment in Bangladesh. We offer scientific instruments, chemicals, reagents, and consumables tailored to your sector.
-              </p>
-              <h3>What we supply</h3>
-              <ul class="about-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Laboratory instruments—chromatography, meters, glassware, and plasticware.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Textile testing, pharmaceutical tools, raw materials, and industrial QC products.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Kits for chemistry, biology, microbiology, water and environmental testing, and more.</li>
-              </ul>
-              <p>
-                Customer satisfaction drives our work. We aim to grow with our clients by meeting their needs with dependable products and responsive service.
-              </p>
-            </div>
-          </div>
+
+    <!-- Featured products -->
+    <section id="products" class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Our products</p>
+          <h2 class="display">Instruments for every <em>bench</em></h2>
+          <p class="lead">A sample of the instruments and systems we supply. Open any product for details, or contact us for specifications and availability.</p>
+        </div>
+        <div class="pgrid pgrid--featured" id="featured-grid">
+          <noscript><p>Browse the full list on the <a href="products.html">products page</a>.</p></noscript>
+        </div>
+        <div class="section-foot btn-row reveal">
+          <a class="btn btn--primary" href="products.html">View all <span data-product-count>40</span> products <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+          <a class="btn btn--ghost" href="product-line.html"><i class="bi bi-list-ul" aria-hidden="true"></i> Full product line</a>
         </div>
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats section spe-stats-band">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex">
-            <div class="spe-stat-card w-100 d-flex flex-column align-items-center">
-              <i class="bi bi-emoji-smile" aria-hidden="true"></i>
-              <div class="stats-item">
-                <span data-purecounter-start="0" data-purecounter-end="132" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex">
-            <div class="spe-stat-card w-100 d-flex flex-column align-items-center">
-              <i class="bi bi-journal-richtext" aria-hidden="true"></i>
-              <div class="stats-item">
-                <span data-purecounter-start="0" data-purecounter-end="133" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Projects</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex">
-            <div class="spe-stat-card w-100 d-flex flex-column align-items-center">
-              <i class="bi bi-headset" aria-hidden="true"></i>
-              <div class="stats-item">
-                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hours Of Support</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex">
-            <div class="spe-stat-card w-100 d-flex flex-column align-items-center">
-              <i class="bi bi-people" aria-hidden="true"></i>
-              <div class="stats-item">
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hard Workers</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Our values</h2>
-        <p>We build relationships on honesty and integrity, and we follow through on what we promise. Our team treats clients and colleagues with respect so every interaction stays fair and professional.</p>
-        <p>Humility and empathy guide how we listen and respond. We collaborate openly so we can reach shared goals efficiently, and we support each other to keep improving.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="spe-skills-panel">
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>INTEGRITY</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>INNOVATION</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>RESPONSIBILITY</span> <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>DISCIPLINE</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>TEAM WORK</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>EXCELLENCE</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-        </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <section id="portfolio" class="portfolio section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-          <h2>Our products</h2>
-          <p>A sample of the instruments and systems we supply. Tap an image to view it larger, or contact us for specifications and availability.</p>
-      </div>
-  
-      <div class="container">
-          <div class="row gy-4" id="portfolio-items">
-              <!-- Portfolio Items -->
-              <div class="col-lg-4 col-md-6 portfolio-item">
-                  <img src="assets/img/1.jpg" class="img-fluid" alt="pH Meter">
-                  <div class="portfolio-info">
-                      <h4>pH Meter</h4>
-                      <p>Precision engineering for accurate pH measurement in various applications.</p>
-                      <a href="assets/img/1.jpg" title="pH Meter" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item">
-                  <img src="assets/img/2.jpg" class="img-fluid" alt="Ultra Low Freezer">
-                  <div class="portfolio-info">
-                      <h4>Ultra Low Freezer</h4>
-                      <p>Reliable and energy-efficient freezer solutions for critical storage needs.</p>
-                      <a href="assets/img/2.jpg" title="Ultra Low Freezer" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item">
-                  <img src="assets/img/3.jpg" class="img-fluid" alt="Microdrop Spectrophotometer">
-                  <div class="portfolio-info">
-                      <h4>Microdrop Spectrophotometer</h4>
-                      <p>Advanced systems designed for precise measurement and high-throughput analysis.</p>
-                      <a href="assets/img/3.jpg" title="Microdrop Spectrophotometer" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item">
-                  <img src="assets/img/4.jpg" class="img-fluid" alt="PCR Machine">
-                  <div class="portfolio-info">
-                      <h4>PCR Machine</h4>
-                      <p>High-performance machine for DNA amplification with scalability and reliability.</p>
-                      <a href="assets/img/4.jpg" title="PCR Machine" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item">
-                  <img src="assets/img/5.jpg" class="img-fluid" alt="Flame Photometer">
-                  <div class="portfolio-info">
-                      <h4>Flame Photometer</h4>
-                      <p>Efficient and accurate detection of elements like sodium, potassium, and lithium.</p>
-                      <a href="assets/img/5.jpg" title="Flame Photometer" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item">
-                  <img src="assets/img/6.jpg" class="img-fluid" alt="UV-Visible Spectrophotometer">
-                  <div class="portfolio-info">
-                      <h4>UV-Visible Spectrophotometer</h4>
-                      <p>Cutting-edge technology for precise optical measurements across a wide range of wavelengths.</p>
-                      <a href="assets/img/6.jpg" title="UV-Visible Spectrophotometer" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <!-- Remaining items (7-17) -->
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/7.jpg" class="img-fluid" alt="Microscope">
-                  <div class="portfolio-info">
-                      <h4>Microscope</h4>
-                      <p>High-resolution microscope for detailed imaging and analysis at the microscopic level.</p>
-                      <a href="assets/img/7.jpg" title="Microscope" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/8.jpg" class="img-fluid" alt="Muffle Furnace">
-                  <div class="portfolio-info">
-                      <h4>Muffle Furnace</h4>
-                      <p>High-temperature furnace ideal for material testing and laboratory applications.</p>
-                      <a href="assets/img/8.jpg" title="Muffle Furnace" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/9.jpg" class="img-fluid" alt="Forced Air Oven">
-                  <div class="portfolio-info">
-                      <h4>Forced Air Oven</h4>
-                      <p>Advanced oven for controlled heating and drying processes with uniform air circulation.</p>
-                      <a href="assets/img/9.jpg" title="Forced Air Oven" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/10.jpg" class="img-fluid" alt="Autoclave">
-                  <div class="portfolio-info">
-                      <h4>Autoclave</h4>
-                      <p>Safe and reliable sterilization solutions for medical, laboratory, and industrial uses.</p>
-                      <a href="assets/img/10.jpg" title="Autoclave" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/11.jpg" class="img-fluid" alt="Centrifuge">
-                  <div class="portfolio-info">
-                      <h4>Centrifuge</h4>
-                      <p>High-speed centrifuge for separating substances in laboratories and research.</p>
-                      <a href="assets/img/11.jpg" title="Centrifuge" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/12.jpg" class="img-fluid" alt="Distillation Apparatus">
-                  <div class="portfolio-info">
-                      <h4>Distillation Apparatus</h4>
-                      <p>Precision equipment for separating mixtures based on differences in boiling points.</p>
-                      <a href="assets/img/12.jpg" title="Distillation Apparatus" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/13.jpg" class="img-fluid" alt="Flame Photometer">
-                  <div class="portfolio-info">
-                      <h4>Flame Photometer</h4>
-                      <p>A Flame Photometer is an analytical instrument used to measure the concentration of metal ions.</p>
-                      <a href="assets/img/13.jpg" title="Flame Photometer" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/14.jpg" class="img-fluid" alt="Orbital Shaker">
-                  <div class="portfolio-info">
-                      <h4>Orbital Shaker</h4>
-                      <p>A laboratory device that provides a circular shaking motion to mix, agitate, or aerate samples.</p>
-                      <a href="assets/img/14.jpg" title="Orbital Shaker" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/15.jpg" class="img-fluid" alt="DR6000 Hach Spectrophotometer">
-                  <div class="portfolio-info">
-                    <h4>DR6000 Hach Spectrophotometer</h4>
-                    <p>The DR6000 Hach Spectrophotometer is a high-performance laboratory instrument designed for precise analysis of water and wastewater, offering a wide wavelength range and preprogrammed testing methods for various parameters.</p>
-                      <a href="assets/img/15.jpg" title="DR6000 Hach Spectrophotometer" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/16.jpg" class="img-fluid" alt="Flake Ice Maker">
-                  <div class="portfolio-info">
-                    <h4>Flake Ice Maker</h4>
-                    <p>A Flake Ice Maker is a machine that produces thin, flat pieces of ice, commonly used for preserving perishable goods, in laboratories, and for industrial cooling applications due to its rapid cooling efficiency and moldability.</p>
-                      <a href="assets/img/16.jpg" title="Flake Ice Maker" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                  <img src="assets/img/17.jpg" class="img-fluid" alt="Water Purifier">
-                  <div class="portfolio-info">
-                    <h4>Water Purifier</h4>
-                    <p>
-                      A Water Purifier is a device designed to remove impurities, contaminants, and microorganisms from water, ensuring it is safe and clean for drinking, laboratory use, or industrial applications.</p>
-                      <a href="assets/img/17.jpg" title="Water Purifier" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                <img src="assets/img/18.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <a href="assets/img/18.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                <img src="assets/img/19.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <a href="assets/img/19.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                <img src="assets/img/20.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <a href="assets/img/20.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                <img src="assets/img/21.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <a href="assets/img/21.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                <img src="assets/img/22.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <a href="assets/img/22.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                <img src="assets/img/23.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <a href="assets/img/23.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 portfolio-item portfolio-item--extra">
-                <img src="assets/img/24.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <a href="assets/img/24.jpg" title=" " data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-          </div>
-          <div class="portfolio-toggle-wrap">
-              <button type="button" id="see-more-btn" class="btn-see-more" aria-expanded="false" aria-controls="portfolio-items">See more products</button>
-          </div>
-      </div>
-  </section>
-  
-  <script>
-      (function () {
-        var grid = document.getElementById('portfolio-items');
-        var btn = document.getElementById('see-more-btn');
-        if (!grid || !btn) return;
-        btn.addEventListener('click', function () {
-          var expanded = grid.classList.toggle('portfolio-expanded');
-          btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-          btn.textContent = expanded ? 'Show fewer products' : 'See more products';
-        });
-      })();
-  </script>
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>We offer a range of services to meet your needs, from supply to servicing, ensuring that your systems are fully operational and maintained.</p>
-      </div><!-- End Section Title -->
-    
-      <div class="container">
-        <div class="row gy-4">
-    
-          <!-- Service 1: Supply -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <div class="icon">
-                <i class="bi bi-cart"></i>
-              </div>
-              <a href="#contact" class="stretched-link">
-                <h3>Supply</h3>
-              </a>
-              <p>We provide high-quality products, sourced from trusted manufacturers, to meet your business or project needs.</p>
-            </div>
-          </div><!-- End Service 1 -->
-    
-          <!-- Service 2: Installation -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item item-orange position-relative">
-              <div class="icon">
-                <i class="bi bi-gear"></i>
-              </div>
-              <a href="#contact" class="stretched-link">
-                <h3>Installation</h3>
-              </a>
-              <p>Our team ensures that all products and systems are properly installed to guarantee seamless operation and optimal performance.</p>
-            </div>
-          </div><!-- End Service 2 -->
-    
-          <!-- Service 3: Commission -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item item-teal position-relative">
-              <div class="icon">
-                <i class="bi bi-check-circle"></i>
-              </div>
-              <a href="#contact" class="stretched-link">
-                <h3>Commission</h3>
-              </a>
-              <p>We carry out the final commissioning process to ensure that all systems are fully functional and meet your specifications before going live.</p>
-            </div>
-          </div><!-- End Service 3 -->
-    
-          <!-- Service 4: Servicing -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item item-red position-relative">
-              <div class="icon">
-                <i class="bi bi-tools"></i>
-              </div>
-              <a href="#contact" class="stretched-link">
-                <h3>Servicing</h3>
-              </a>
-              <p>We provide ongoing maintenance and servicing to ensure that your systems operate at peak efficiency and remain in top condition.</p>
-            </div>
-          </div><!-- End Service 4 -->
-    
-          <!-- Service 5: Consultation -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item item-blue position-relative">
-              <div class="icon">
-                <i class="bi bi-person"></i>
-              </div>
-              <a href="#contact" class="stretched-link">
-                <h3>Consultation</h3>
-              </a>
-              <p>Our expert team offers consultations to help you plan, design, and implement systems tailored to your specific needs.</p>
-            </div>
-          </div><!-- End Service 5 -->
-    
-          <!-- Service 6: Support -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item item-purple position-relative">
-              <div class="icon">
-                <i class="bi bi-life-preserver"></i>
-              </div>
-              <a href="#contact" class="stretched-link">
-                <h3>Support</h3>
-              </a>
-              <p>We provide continuous support to assist with troubleshooting and ensuring smooth operation of your systems.</p>
-            </div>
-          </div><!-- End Service 6 -->
-    
-        </div><!-- End Row -->
-      </div><!-- End Container -->
-    </section><!-- End Services Section -->
-    <!-- /Services Section -->
-
-    
-
-<!-- Contact Section -->
-<section id="contact" class="contact section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Questions about products, pricing, or service? Send a message or reach us directly—we typically reply within one business day.</p>
-  </div>
-
-  <div class="container" data-aos="fade" data-aos-delay="100">
-    <div class="row gy-4">
-
-      <div class="col-lg-4">
-        <div class="spe-contact-stack">
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-          <i class="bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
-          <div>
-            <h3>Registered address</h3>
-            <p>14, Kakrail, 3rd floor, Room No: 06, Dhaka-1000</p>
-          </div>
-        </div>
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-          <i class="bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
-          <div>
-            <h3>Corporate address</h3>
-            <p>10, Kader Tropical heights, G-23/C, Tikatuli, Hathkhola, Dhaka-1203</p>
-          </div>
-        </div>
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-          <i class="bi bi-telephone flex-shrink-0" aria-hidden="true"></i>
-          <div>
-            <h3>Phone</h3>
-            <p>
-              <a href="tel:+8801864226212">01864-226212</a><br>
-              <a href="tel:+8801922406225">01922-406225</a>
-            </p>
-          </div>
-        </div>
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-          <i class="bi bi-envelope flex-shrink-0" aria-hidden="true"></i>
-          <div>
-            <h3>Email</h3>
-            <ul class="contact-email-list">
-              <li><a href="mailto:scienceparkengineering18@gmail.com">scienceparkengineering18@gmail.com</a></li>
-              <li><a href="mailto:scienceparkengineering@gmail.com">scienceparkengineering@gmail.com</a></li>
-              <li><a href="mailto:tariful94@gmail.com">tariful94@gmail.com</a></li>
-            </ul>
-          </div>
-        </div>
+    <!-- Brands -->
+    <section id="brands" class="section section--flush-top" aria-labelledby="brands-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Our principals</p>
+          <h2 id="brands-heading" class="display">Brands we <em>work with</em></h2>
+          <p class="lead">We supply equipment from established manufacturers in Germany, USA, Spain, Poland, Japan, Korea, India, China and more.</p>
         </div>
       </div>
+      <div class="marquee reveal">
+          <ul class="marquee__track"><li>Radwag</li><li>Scilogex</li><li>JSR</li><li>DLAB</li><li>Ohaus</li><li>Optika</li><li>Infitek</li><li>Labdex</li><li>IUL</li><li>Scitek</li><li>PG Instruments</li><li>Roth</li><li class="marquee__dup" aria-hidden="true">Radwag</li><li class="marquee__dup" aria-hidden="true">Scilogex</li><li class="marquee__dup" aria-hidden="true">JSR</li><li class="marquee__dup" aria-hidden="true">DLAB</li><li class="marquee__dup" aria-hidden="true">Ohaus</li><li class="marquee__dup" aria-hidden="true">Optika</li><li class="marquee__dup" aria-hidden="true">Infitek</li><li class="marquee__dup" aria-hidden="true">Labdex</li><li class="marquee__dup" aria-hidden="true">IUL</li><li class="marquee__dup" aria-hidden="true">Scitek</li><li class="marquee__dup" aria-hidden="true">PG Instruments</li><li class="marquee__dup" aria-hidden="true">Roth</li></ul>
+          <ul class="marquee__track marquee__track--rev"><li>Tiangen</li><li>Cleaver</li><li>Gram</li><li>Interscience</li><li>Apel</li><li>SH Scientific</li><li>Peak Scientific</li><li>Nabertherm</li><li>HiMedia</li><li>Bosch</li><li>Takara</li><li class="marquee__dup" aria-hidden="true">Tiangen</li><li class="marquee__dup" aria-hidden="true">Cleaver</li><li class="marquee__dup" aria-hidden="true">Gram</li><li class="marquee__dup" aria-hidden="true">Interscience</li><li class="marquee__dup" aria-hidden="true">Apel</li><li class="marquee__dup" aria-hidden="true">SH Scientific</li><li class="marquee__dup" aria-hidden="true">Peak Scientific</li><li class="marquee__dup" aria-hidden="true">Nabertherm</li><li class="marquee__dup" aria-hidden="true">HiMedia</li><li class="marquee__dup" aria-hidden="true">Bosch</li><li class="marquee__dup" aria-hidden="true">Takara</li></ul>
+      </div>
+    </section>
 
-      <div class="col-lg-8">
-        <div class="spe-form-panel">
-        <form id="contact-form" action="https://formspree.io/f/xyzyldwk" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <label class="visually-hidden" for="contact-name">Your name</label>
-              <input id="contact-name" type="text" name="name" class="form-control" placeholder="Your name" autocomplete="name" required>
-            </div>
-
-            <div class="col-md-6">
-              <label class="visually-hidden" for="contact-email">Your email</label>
-              <input id="contact-email" type="email" name="email" class="form-control" placeholder="Your email" autocomplete="email" required>
-            </div>
-
-            <div class="col-md-12">
-              <label class="visually-hidden" for="contact-subject">Subject</label>
-              <input id="contact-subject" type="text" name="subject" class="form-control" placeholder="Subject" required>
-            </div>
-
-            <div class="col-md-12">
-              <label class="visually-hidden" for="contact-message">Message</label>
-              <textarea id="contact-message" name="message" class="form-control" rows="6" placeholder="How can we help?" required></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading" style="display:none;" aria-live="polite">Sending…</div>
-              <div class="error-message" style="display:none;" role="alert" aria-live="assertive"></div>
-              <div class="sent-message" style="display:none;" role="status" aria-live="polite">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send message</button>
-            </div>
-
-          </div>
-        </form>
+    <!-- Services -->
+    <section id="services" class="section section--tint">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Services</p>
+          <h2 class="display">From supply to <em>servicing</em></h2>
+          <p class="lead">We offer a range of services to meet your needs, ensuring that your systems are fully operational and maintained.</p>
+        </div>
+        <div class="services">
+          <article class="service reveal" style="--d:0ms">
+            <span class="service__icon"><i class="bi bi-cart" aria-hidden="true"></i></span>
+            <span class="service__no">01</span>
+            <h3>Supply</h3>
+            <p>We provide high-quality products, sourced from trusted manufacturers, to meet your business or project needs.</p>
+          </article>
+          <article class="service reveal" style="--d:80ms">
+            <span class="service__icon"><i class="bi bi-gear" aria-hidden="true"></i></span>
+            <span class="service__no">02</span>
+            <h3>Installation</h3>
+            <p>Our team ensures that all products and systems are properly installed to guarantee seamless operation and optimal performance.</p>
+          </article>
+          <article class="service reveal" style="--d:160ms">
+            <span class="service__icon"><i class="bi bi-check-circle" aria-hidden="true"></i></span>
+            <span class="service__no">03</span>
+            <h3>Commission</h3>
+            <p>We carry out the final commissioning process to ensure that all systems are fully functional and meet your specifications before going live.</p>
+          </article>
+          <article class="service reveal" style="--d:0ms">
+            <span class="service__icon"><i class="bi bi-tools" aria-hidden="true"></i></span>
+            <span class="service__no">04</span>
+            <h3>Servicing</h3>
+            <p>We provide ongoing maintenance and servicing to ensure that your systems operate at peak efficiency and remain in top condition.</p>
+          </article>
+          <article class="service reveal" style="--d:80ms">
+            <span class="service__icon"><i class="bi bi-person" aria-hidden="true"></i></span>
+            <span class="service__no">05</span>
+            <h3>Consultation</h3>
+            <p>Our expert team offers consultations to help you plan, design, and implement systems tailored to your specific needs.</p>
+          </article>
+          <article class="service reveal" style="--d:160ms">
+            <span class="service__icon"><i class="bi bi-life-preserver" aria-hidden="true"></i></span>
+            <span class="service__no">06</span>
+            <h3>Support</h3>
+            <p>We provide continuous support to assist with troubleshooting and ensuring smooth operation of your systems.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <script>
-    (function () {
-      var form = document.getElementById('contact-form');
-      if (!form) return;
-      var loadingMessage = form.querySelector('.loading');
-      var sentMessage = form.querySelector('.sent-message');
-      var errorMessage = form.querySelector('.error-message');
+    <!-- Company profile download -->
+    <section id="profile" class="section" aria-labelledby="profile-heading">
+      <div class="wrap">
+        <div class="banner reveal">
+          <span class="banner__icon"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i></span>
+          <p class="eyebrow">Company profile</p>
+          <h2 id="profile-heading" class="display">Take our product list <em>with you</em></h2>
+          <p>Download the Science Park Engineering company profile — our illustrated product list with full contact details, ready to save, print, or share with your team.</p>
+          <div class="btn-row">
+            <a class="btn btn--light" href="assets/docs/science-park-engineering-company-profile.pdf" download="Science-Park-Engineering-Company-Profile.pdf"><i class="bi bi-download" aria-hidden="true"></i> Download company profile</a>
+            <a class="btn btn--outline-light" href="assets/docs/science-park-engineering-company-profile.pdf" target="_blank" rel="noopener">View in browser <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <p class="banner__meta">PDF · 16 pages · 841 KB</p>
+        </div>
+      </div>
+    </section>
 
-      form.addEventListener('submit', async function (event) {
-        event.preventDefault();
+    <!-- Values -->
+    <section id="values" class="section section--flush-top">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Our values</p>
+          <h2 class="display">Built on honesty and <em>follow-through</em></h2>
+          <div class="values__copy">
+            <p>We build relationships on honesty and integrity, and we follow through on what we promise. Our team treats clients and colleagues with respect so every interaction stays fair and professional.</p>
+            <p>Humility and empathy guide how we listen and respond. We collaborate openly so we can reach shared goals efficiently, and we support each other to keep improving.</p>
+          </div>
+        </div>
+        <ul class="values__list">
+          <li class="value reveal"><i class="bi bi-shield-check" aria-hidden="true"></i>Integrity</li>
+          <li class="value reveal" style="--d:60ms"><i class="bi bi-lightbulb" aria-hidden="true"></i>Innovation</li>
+          <li class="value reveal" style="--d:120ms"><i class="bi bi-clipboard-check" aria-hidden="true"></i>Responsibility</li>
+          <li class="value reveal" style="--d:180ms"><i class="bi bi-bullseye" aria-hidden="true"></i>Discipline</li>
+          <li class="value reveal" style="--d:240ms"><i class="bi bi-people" aria-hidden="true"></i>Team work</li>
+          <li class="value reveal" style="--d:300ms"><i class="bi bi-award" aria-hidden="true"></i>Excellence</li>
+        </ul>
+      </div>
+    </section>
 
-        if (loadingMessage) loadingMessage.style.display = 'block';
-        if (sentMessage) sentMessage.style.display = 'none';
-        if (errorMessage) {
-          errorMessage.style.display = 'none';
-          errorMessage.textContent = '';
-        }
+    <!-- Contact -->
+    <section id="contact" class="section section--tint">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 class="display">Tell us what your lab <em>needs</em></h2>
+          <p class="lead">Questions about products, pricing, or service? Send a message or reach us directly — we typically reply within one business day.</p>
+        </div>
 
-        try {
-          var response = await fetch(form.action, {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-              'X-Requested-With': 'XMLHttpRequest',
-            },
-            body: new FormData(form),
-          });
+        <div class="contact__grid">
+          <div class="panel contact__list reveal">
+            <div class="contact__item">
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              <div>
+                <h3>Registered address</h3>
+                <p>14, Kakrail, 3rd floor, Room No: 06, Dhaka-1000</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <i class="bi bi-building" aria-hidden="true"></i>
+              <div>
+                <h3>Corporate address</h3>
+                <p>10, Kader Tropical heights, G-23/C, Tikatuli, Hathkhola, Dhaka-1203</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <i class="bi bi-telephone" aria-hidden="true"></i>
+              <div>
+                <h3>Phone</h3>
+                <p><a href="tel:+8801864226212">01864-226212</a><br><a href="tel:+8801922406225">01922-406225</a></p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              <div>
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/8801864226212?text=Hello%20Science%20Park%20Engineering%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener noreferrer">Chat on 01864-226212</a></p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <div>
+                <h3>Email</h3>
+                <ul>
+                  <li><a href="mailto:scienceparkengineering18@gmail.com">scienceparkengineering18@gmail.com</a></li>
+                  <li><a href="mailto:scienceparkengineering@gmail.com">scienceparkengineering@gmail.com</a></li>
+                  <li><a href="mailto:tariful94@gmail.com">tariful94@gmail.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-          if (loadingMessage) loadingMessage.style.display = 'none';
+          <form id="contact-form" class="panel form reveal" style="--d:120ms" action="https://formspree.io/f/xyzyldwk" method="POST">
+            <div class="field">
+              <label for="contact-name">Your name</label>
+              <input id="contact-name" type="text" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="contact-email">Your email</label>
+              <input id="contact-email" type="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field field--full">
+              <label for="contact-subject">Subject</label>
+              <input id="contact-subject" type="text" name="subject" required>
+            </div>
+            <div class="field field--full field--grow">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="6" placeholder="How can we help?" required></textarea>
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--primary" type="submit">Send message <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+              <p class="form__status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
 
-          if (response.ok) {
-            var data = await response.json();
-            if (data.ok) {
-              if (sentMessage) sentMessage.style.display = 'block';
-              form.reset();
-            } else {
-              throw new Error('Failed to send message');
-            }
-          } else {
-            throw new Error('Failed to send message');
-          }
-        } catch (err) {
-          if (loadingMessage) loadingMessage.style.display = 'none';
-          if (errorMessage) {
-            errorMessage.style.display = 'block';
-            errorMessage.textContent = 'Something went wrong. Please try again later, or email us directly.';
-          }
-          console.error(err);
-        }
-      });
-    })();
-  </script>
-</section>
-
-
-
+        <div class="map reveal">
+          <iframe title="Science Park Engineering office location on Google Maps" src="https://www.google.com/maps?q=Kader+Tropical+Heights,+Tikatuli,+Hathkhola,+Dhaka+1203&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="btn btn--light btn--sm map__link" href="https://www.google.com/maps/search/?api=1&amp;query=Kader+Tropical+Heights,+Tikatuli,+Hathkhola,+Dhaka+1203" target="_blank" rel="noopener noreferrer"><i class="bi bi-geo-alt" aria-hidden="true"></i> Open in Google Maps</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <h3 class="sitename">Science Park Engineering</h3>
-      <p>Laboratory equipment and scientific instruments across Bangladesh.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/scienceparkeng?mibextid=ZbWKwL" aria-label="Science Park Engineering on Facebook" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Science Park Engineering</strong> <span>All Rights Reserved</span>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__grid">
+        <nav class="site-footer__col site-footer__col--start" aria-label="Footer">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="product-line.html">Full product line</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#values">Our values</a></li>
+            <li><a href="assets/docs/science-park-engineering-company-profile.pdf" download="Science-Park-Engineering-Company-Profile.pdf">Company profile (PDF)</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-footer__brand">
+          <a class="site-footer__logo" href="index.html" aria-label="Science Park Engineering home"><img src="assets/img/logo%20(2).png" alt="Science Park Engineering" width="603" height="413" loading="lazy"></a>
+          <p class="site-footer__tagline">Laboratory equipment and scientific instruments across Bangladesh.</p>
+          <div class="site-footer__socials">
+            <a class="site-footer__social" href="https://www.facebook.com/scienceparkeng?mibextid=ZbWKwL" aria-label="Science Park Engineering on Facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a class="site-footer__social" href="https://wa.me/8801864226212?text=Hello%20Science%20Park%20Engineering%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+            <a class="site-footer__social" href="mailto:scienceparkengineering18@gmail.com" aria-label="Email Science Park Engineering"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+          </div>
+          <a class="btn btn--light btn--sm" href="#contact">Get a quote <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         </div>
-        
+
+        <div class="site-footer__col site-footer__col--end">
+          <h3>Reach us</h3>
+          <ul>
+            <li><a href="tel:+8801864226212">01864-226212</a></li>
+            <li><a href="tel:+8801922406225">01922-406225</a></li>
+            <li><a href="mailto:scienceparkengineering18@gmail.com">scienceparkengineering18@gmail.com</a></li>
+            <li>14, Kakrail, 3rd floor, Room No: 06, Dhaka-1000</li>
+            <li>10, Kader Tropical heights, G-23/C, Tikatuli, Hathkhola, Dhaka-1203</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="site-footer__wordmark" aria-hidden="true">Science Park Engineering</p>
+
+      <div class="site-footer__bar">
+        <span>© <span id="year">2026</span> Science Park Engineering. All rights reserved.</span>
+        <span>Quality Scientific Works</span>
       </div>
     </div>
-</footer>
+  </footer>
 
+  <a class="wa-float" href="https://wa.me/8801864226212?text=Hello%20Science%20Park%20Engineering%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#main" class="to-top" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/vendor/lenis/lenis.min.js?v=20261122g"></script>
+  <script src="assets/js/products.js?v=20261122g"></script>
+  <script src="assets/js/site.js?v=20261122g"></script>
+  <script src="assets/js/bot.js?v=20261122g"></script>
 
 </body>
 
